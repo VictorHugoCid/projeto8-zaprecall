@@ -1,9 +1,9 @@
-import react from "react";
+import FirstPage from "./FirstPage";
 
-function App(){
+export default function App(){
     return(
         <div>
-            Hellow World
+            <FirstPage />
         </div>
     )
 }
