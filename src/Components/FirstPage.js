@@ -1,12 +1,14 @@
 
-export default function FirstPage(){
+export default function FirstPage({logged, setLogged}){
     return (
         <div className = "firstPage">
-
-            <img src = "./public/images/logo.png" />
+            <img src = "./images/logo.png" />
             <p>ZapRecall</p>
-            <div className = "button">Iniciar</div>
-            
+            <div 
+                className = "button" 
+                onClick={() => setLogged(!logged)}>
+                Iniciar
+            </div>
         </div>
     )
 }

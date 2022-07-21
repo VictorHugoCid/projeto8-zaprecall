@@ -1,9 +1,21 @@
-import FirstPage from "./FirstPage";
+import React from "react";
 
-export default function App(){
-    return(
-        <div>
-            <FirstPage />
-        </div>
+import FirstPage from "./FirstPage";
+import Main from "./Main.js"
+
+
+
+export default function App() {
+    const [logged, setLogged] = React.useState(true);
+    console.log("chamou")
+
+    return (
+        <>
+            {logged ? ( 
+                <FirstPage  logged={logged} setLogged={setLogged} />
+            ): (
+                <Main />
+            )}
+        </>
     )
 }
