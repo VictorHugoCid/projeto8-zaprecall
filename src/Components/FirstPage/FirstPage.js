@@ -1,8 +1,10 @@
+import './FirstPage.css'
+import logo from '../images/logo.png' 
 
 export default function FirstPage({logged, setLogged}){
     return (
         <div className = "firstPage">
-            <img src = "./images/logo.png" />
+            <img src ={logo} alt=''/>
             <p>ZapRecall</p>
             <div 
                 className = "button" 

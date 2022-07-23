@@ -1,0 +1,120 @@
+.question{
+    width: 300px;
+    height: 65px;
+    margin-top: 20px;
+
+    background-color: #FFFFFF;
+    list-style: none;
+
+    box-shadow: 0px 4px 5px rgba(0, 0, 0, 0.15);
+    border-radius: 5px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 10px;
+
+    font-family: 'Righteous', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+
+    
+}
+
+.question:hover{
+    cursor: pointer;
+    filter:opacity(0.8)
+}
+
+.question ion-icon{
+    width: 20px;
+    height: 20px;
+    color: black;
+}
+
+/*XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX */
+/*XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX */
+/*XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX */
+
+.questionOpen{
+    width: 299px;
+    height: 131px;
+    margin-top: 20px;
+    background-color: #FFFFD4;
+    box-shadow: 0px 4px 5px rgba(0, 0, 0, 0.15);
+    border-radius: 5px;
+    padding: 10px;
+
+    position: relative;
+}
+
+.questionOpen img{
+    width: 20px;
+    height: 13px;
+    position: absolute;
+    right: 15px;
+    bottom: 15px;
+
+    cursor: pointer;
+}
+.answer{
+    font-size: 18px;
+}
+
+.choices{
+    width: 100%;
+    padding: 0 5px;
+    display: flex;
+    justify-content: space-evenly;
+
+    position: absolute;
+    bottom: 5px;
+    left: 0px;
+}
+
+.naoLembrei{
+    width: 85px;
+    height: 37px;
+    border-radius: 5px;
+    background-color: #FF3030;
+
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-size: 12px;
+}
+
+.quaseLembrei{
+    width: 85px;
+    height: 37px;
+    border-radius: 5px;
+    background-color: #FF922E;
+
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-size: 12px;
+}
+
+.zap{
+    width: 85px;
+    height: 37px;
+    border-radius: 5px;
+    background-color: #2FBE34;
+
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-size: 12px;
+}
+
+.naoLembrei:hover, .quaseLembrei:hover, .zap:hover{
+    cursor: pointer;
+    filter: opacity(0.8);
+}

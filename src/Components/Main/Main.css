@@ -1,0 +1,108 @@
+.main{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.header{
+    width: 100%;
+    margin-top: 100px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.header p{
+    font-size: 36px;
+    font-weight: 400;
+    color: #FFFFFF;
+
+    margin-left: 30px;
+}
+
+.questions{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    margin-top: 50px;
+}
+
+.question{
+    width: 300px;
+    height: 65px;
+    margin-top: 20px;
+
+    background-color: #FFFFFF;
+    list-style: none;
+
+    box-shadow: 0px 4px 5px rgba(0, 0, 0, 0.15);
+    border-radius: 5px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 10px;
+
+    font-family: 'Righteous', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.question ion-icon{
+    width: 20px;
+    height: 20px;
+    color: black;
+}
+
+.footer{
+    width: 100%;
+    min-height: 65px;
+    background-color: #FFFFFF;
+    box-shadow: 0px -4px 6px rgba(0, 0, 0, 0.05);
+
+    position: fixed;
+    bottom: 0;
+    padding: 5px;
+
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    font-family: 'Righteous', sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+}
+
+.footer p{
+    margin-bottom: 10px;
+
+    font-family: 'Recursive', sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+}
+
+.footer ion-icon[name=checkmark-circle] {
+    color: #2FBE34;
+    width: 23px;
+    height: 23px;
+}
+
+.footer ion-icon[name=close-circle] {
+    color: #FF3030;
+    width: 23px;
+    height: 23px;
+}
+
+.footer ion-icon[name=help-circle] {
+    color: #FF922E;
+    width: 23px;
+    height: 23px;
+}
+
+
