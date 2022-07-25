@@ -5,17 +5,21 @@ import setinha from '../images/setinha.png'
 
 import Icon from '../Icon/Icon.js'
 
-export default function Card({ pergunta, index }) {
+export default function Card({ pergunta, resposta, index, totalAnswer, setTotalAnswer }) {
 
     const [flipped, setFlipped] = React.useState('flashCard')
     const [answer, setAnswer] = React.useState('')
+    const [classe, setClasse] = React.useState('question')
 
+    function changeStyle(){
+        /* alert("chamou") */
+    }
         switch (flipped) {
             case 'flashCard':
                 return (
-                    <li className="question" onClick={() => setFlipped('faceUp')}>
+                    <li className={classe} onClick={() => setFlipped('faceUp')}>
                         Pergunta {index +1}
-                        <Icon answer={answer} setAnswer={setAnswer}/>
+                        <Icon answer={answer}/>
                     </li>)
     
             
@@ -35,14 +39,16 @@ export default function Card({ pergunta, index }) {
                 return (
                     <li className="questionOpen">
                         <div className="answer">
-                            {pergunta}
+                            {resposta}
                         </div>
     
                         <ul className="choices">
                             <li className="naoLembrei" onClick={() => {
                                 return (
                                     setFlipped('flashCard'),
-                                    setAnswer('wrong')
+                                    setAnswer('wrong'),
+                                    setTotalAnswer(totalAnswer + 1),
+                                    setClasse("question red")
 
                                     )}}>
                                 Não lembrei.
@@ -51,7 +57,9 @@ export default function Card({ pergunta, index }) {
                             <li className="quaseLembrei" onClick={() => {
                                 return (
                                     setFlipped('flashCard'),
-                                    setAnswer('help')
+                                    setAnswer('help'),
+                                    setTotalAnswer(totalAnswer + 1),
+                                    setClasse("question orange")
 
                                     )}}>
                                 Quase não lembrei.
@@ -59,7 +67,9 @@ export default function Card({ pergunta, index }) {
                             <li className="zap" onClick={() => {
                                 return (
                                     setFlipped('flashCard'),
-                                    setAnswer('check')
+                                    setAnswer('check'),
+                                    setTotalAnswer(totalAnswer + 1),
+                                    setClasse("question green")
 
                                     )}}>
                                 Zap!
@@ -72,22 +82,3 @@ export default function Card({ pergunta, index }) {
         }
 
 }
-
-/* return (
-    <>
-        {flipped ? (
-            <li className="questionOpen">
-                <div className="answer">
-                    {pergunta}
-                </div>
-
-                <img src={setinha} alt='' onClick={flipCard} />
-            </li>
-        ) : (
-            <li className="question" onClick={() => setFlipped(!flipped)}>
-                Pergunta 1
-                <ion-icon name="play-outline"></ion-icon>
-            </li>
-        )}
-    </>
-) */

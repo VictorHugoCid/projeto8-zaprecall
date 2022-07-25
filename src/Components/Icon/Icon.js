@@ -1,5 +1,5 @@
 
-
+import './Icon.css'
 
 export default function Icon({answer}){
     

@@ -1,7 +1,9 @@
+import React from 'react'
 import './Main.css'
 import logo from '../images/logo.png'
 
 import Card from "../Card/Card"
+import Footer from "../Footer/Footer"
 
 export default function Main() {
 
@@ -11,6 +13,7 @@ export default function Main() {
             resposta: 'Uma extensão de linguagem do JavaScript'
         },{
             pergunta: 'O React é __',
+            classePergunta: "question ",
             resposta: 'uma biblioteca JavaScript para construção de interfacespt'
         },{
             pergunta: 'Componentes devem iniciar com __',
@@ -33,12 +36,14 @@ export default function Main() {
         }
     ]
     const randomDeck = arrayQuestions.sort(() => (Math.random() - 0.5))
-
     const array4 = []
+
     for (let i = 0; i < 4; i++) {
         array4.push(randomDeck[i])   
     }
+    const [totalAnswer, setTotalAnswer] = React.useState(Number(0))
 
+    
     return (
         <div className="main">
             <div className="header">
@@ -49,26 +54,21 @@ export default function Main() {
             <ul className="questions">
                 <>
                     {array4.map( (arr,index) => {
-                    return <Card pergunta={arr.pergunta} index={index}/>} )}
+                    return <Card 
+                        pergunta={arr.pergunta}
+                        resposta={arr.resposta}
+                        index={index} 
+                        totalAnswer={totalAnswer} 
+                        setTotalAnswer={setTotalAnswer}
+                    />} )}
 
                 </>
             </ul>
 
-            <div className="footer">
-                {/* 0/4 Concluídos */}
-                <p><strong>Parabéns</strong></p>
-                <p>Você não esqueceu de nenhum flashcard!</p>
-                <p>4/4 CONCLUÍDOS</p>
-                <div className="icons">
-                    <ion-icon name="checkmark-circle"></ion-icon>
-                    <ion-icon name="close-circle"></ion-icon>
-                    <ion-icon name="help-circle"></ion-icon>
-                    <ion-icon name="help-circle"></ion-icon>
-                </div>
-
-
-            </div>
-
+            <Footer 
+                totalAnswer={totalAnswer} 
+                setTotalAnswer={setTotalAnswer}
+            />
 
         </div>
     )

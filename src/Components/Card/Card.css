@@ -1,120 +1,138 @@
-.question{
-    width: 300px;
-    height: 65px;
-    margin-top: 20px;
+.question {
+  width: 300px;
+  height: 65px;
+  margin-top: 20px;
 
-    background-color: #FFFFFF;
-    list-style: none;
+  background-color: #ffffff;
+  list-style: none;
 
-    box-shadow: 0px 4px 5px rgba(0, 0, 0, 0.15);
-    border-radius: 5px;
+  box-shadow: 0px 4px 5px rgba(0, 0, 0, 0.15);
+  border-radius: 5px;
 
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 0 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 10px;
 
-    font-family: 'Righteous', sans-serif;
-    font-size: 16px;
-    font-weight: 400;
-
-    
+  font-family: "Righteous", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
 }
 
-.question:hover{
-    cursor: pointer;
-    filter:opacity(0.8)
+.red {
+  color: #ff3030;
+  text-decoration: line-through;
 }
 
-.question ion-icon{
-    width: 20px;
-    height: 20px;
-    color: black;
+.green {
+  color: #2fbe34;
+  text-decoration: line-through;
+}
+
+.orange {
+  color: #ff922e;
+  text-decoration: line-through;
+}
+
+.question:hover {
+  cursor: pointer;
+  filter: opacity(0.8);
+}
+
+.question ion-icon {
+  width: 20px;
+  height: 20px;
+  color: black;
 }
 
 /*XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX */
 /*XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX */
 /*XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX */
 
-.questionOpen{
-    width: 299px;
-    height: 131px;
-    margin-top: 20px;
-    background-color: #FFFFD4;
-    box-shadow: 0px 4px 5px rgba(0, 0, 0, 0.15);
-    border-radius: 5px;
-    padding: 10px;
+li {
+  list-style: none;
+}
+.questionOpen {
+  width: 299px;
+  height: 131px;
+  margin-top: 20px;
+  background-color: #ffffd4;
+  box-shadow: 0px 4px 5px rgba(0, 0, 0, 0.15);
+  border-radius: 5px;
+  padding: 10px;
 
-    position: relative;
+  position: relative;
 }
 
-.questionOpen img{
-    width: 20px;
-    height: 13px;
-    position: absolute;
-    right: 15px;
-    bottom: 15px;
+.questionOpen img {
+  width: 20px;
+  height: 13px;
+  position: absolute;
+  right: 15px;
+  bottom: 15px;
 
-    cursor: pointer;
+  cursor: pointer;
 }
-.answer{
-    font-size: 18px;
-}
-
-.choices{
-    width: 100%;
-    padding: 0 5px;
-    display: flex;
-    justify-content: space-evenly;
-
-    position: absolute;
-    bottom: 5px;
-    left: 0px;
+.answer {
+  font-size: 18px;
 }
 
-.naoLembrei{
-    width: 85px;
-    height: 37px;
-    border-radius: 5px;
-    background-color: #FF3030;
+.choices {
+  width: 100%;
+  padding: 0 5px;
+  display: flex;
+  justify-content: space-evenly;
 
-    text-align: center;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    font-size: 12px;
+  position: absolute;
+  bottom: 5px;
+  left: 0px;
 }
 
-.quaseLembrei{
-    width: 85px;
-    height: 37px;
-    border-radius: 5px;
-    background-color: #FF922E;
+.naoLembrei {
+  width: 85px;
+  height: 37px;
+  border-radius: 5px;
+  background-color: #ff3030;
 
-    text-align: center;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
-    font-size: 12px;
+  font-size: 12px;
 }
 
-.zap{
-    width: 85px;
-    height: 37px;
-    border-radius: 5px;
-    background-color: #2FBE34;
+.quaseLembrei {
+  width: 85px;
+  height: 37px;
+  border-radius: 5px;
+  background-color: #ff922e;
 
-    text-align: center;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
-    font-size: 12px;
+  font-size: 12px;
 }
 
-.naoLembrei:hover, .quaseLembrei:hover, .zap:hover{
-    cursor: pointer;
-    filter: opacity(0.8);
+.zap {
+  width: 85px;
+  height: 37px;
+  border-radius: 5px;
+  background-color: #2fbe34;
+
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  font-size: 12px;
+}
+
+.naoLembrei:hover,
+.quaseLembrei:hover,
+.zap:hover {
+  cursor: pointer;
+  filter: opacity(0.8);
 }
