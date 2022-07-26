@@ -1,22 +1,16 @@
 import './Footer.css'
+import Icon from '../Icon/Icon'
 
-export default function Footer({totalAnswer}) {
+export default function Footer({cardStatus, verifyFinalAnswer}) {
 
     return (
         <div className="footer">
-            {/* 0/4 Concluídos */}
-            <p><strong>Parabéns</strong></p>
-            <p>Você não esqueceu de nenhum flashcard!</p>
-            <p>{totalAnswer}/4 CONCLUÍDOS</p>
-
-
+            {verifyFinalAnswer()}
+            
+            <p>{cardStatus.length}/4 CONCLUÍDOS</p>
 
              <div className="icons">
-                
-                <ion-icon name="checkmark-circle"></ion-icon>
-                <ion-icon name="close-circle"></ion-icon>
-                <ion-icon name="help-circle"></ion-icon>
-                <ion-icon name="help-circle"></ion-icon>
+                 {cardStatus.map(value => <Icon answer={value.status}/>)}
             </div>
 
         </div>
