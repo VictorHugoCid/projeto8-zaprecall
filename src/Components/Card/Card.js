@@ -5,7 +5,7 @@ import setinha from '../images/setinha.png'
 
 import Icon from '../Icon/Icon.js'
 
-export default function Card({ pergunta, resposta, index, VVcardStatus, verifyFinalAnswer }) {
+export default function Card({ pergunta, resposta, index, getCardStatus }) {
 
     const [flipped, setFlipped] = React.useState('flashCard')
     const [answer, setAnswer] = React.useState('')
@@ -15,21 +15,21 @@ export default function Card({ pergunta, resposta, index, VVcardStatus, verifyFi
         switch (flipped) {
             case 'flashCard':
                 return (
-                    <li className={classe} onClick={() => setFlipped('faceUp')}>
+                    <div className={classe} onClick={() => setFlipped('faceUp')}>
                         Pergunta {index +1}
                         <Icon answer={answer}/>
-                    </li>)
+                    </div>)
     
             
             case 'faceUp':
                 return(
-                    <li className="questionOpen">
+                    <div className="questionOpen">
                         <div className="answer">
                             {pergunta}
                         </div>
     
                         <img src={setinha} alt='' onClick={() => setFlipped('faceDown')} />
-                    </li>)
+                    </div>)
                 
                 
     
@@ -46,7 +46,7 @@ export default function Card({ pergunta, resposta, index, VVcardStatus, verifyFi
                                     setFlipped('flashCard'),
                                     setAnswer('wrong'),
                                     setClasse("question red"),
-                                    VVcardStatus(index, 'wrong')
+                                    getCardStatus(index, 'wrong')
                                     
                                     )}}>
                                 Não lembrei.
@@ -57,7 +57,7 @@ export default function Card({ pergunta, resposta, index, VVcardStatus, verifyFi
                                     setFlipped('flashCard'),
                                     setAnswer('help'),
                                     setClasse("question orange"),
-                                    VVcardStatus(index, 'help')
+                                    getCardStatus(index, 'help')
 
                                     )}}>
                                 Quase não lembrei.
@@ -67,7 +67,7 @@ export default function Card({ pergunta, resposta, index, VVcardStatus, verifyFi
                                     setFlipped('flashCard'),
                                     setAnswer('check'),
                                     setClasse("question green"),
-                                    VVcardStatus(index, 'check')
+                                    getCardStatus(index, 'check')
 
                                     )}}>
                                 Zap!

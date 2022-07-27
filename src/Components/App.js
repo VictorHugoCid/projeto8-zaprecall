@@ -2,6 +2,9 @@ import React from "react";
 
 import FirstPage from "./FirstPage/FirstPage";
 import Main from "./Main/Main"
+/* import styles from '../../public/CSS/styles.css'*/
+
+/* import reset from '../../public/CSS/reset.css'  */
 
 
 
